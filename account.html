@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account & Registration | DoBu Martial Arts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">DOBU <span>MARTIAL ARTS</span></a>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="timetable.html">Timetable</a></li>
+                    <li><a href="memberships.html">Memberships</a></li>
+                    <li><a href="forum.html">Community Forum</a></li>
+                    <li><a href="account.html" class="active btn-login">Account</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">☰</button>
+        </div>
+    </header>
+
+    <main class="container page-section">
+        <h1>Member Portal</h1>
+        <div class="grid">
+            <!-- Login Form -->
+            <div class="card" style="text-align: left;">
+                <h2>Log In</h2>
+                <form onsubmit="handleLogin(event)">
+                    <div style="margin-bottom: 1rem;">
+                        <label for="login-email">Email Address</label><br>
+                        <input type="email" id="login-email" required style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;">
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label for="login-pass">Password</label><br>
+                        <input type="password" id="login-pass" required style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Log In</button>
+                </form>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="card highlight" style="text-align: left;">
+                <h2>Create an Account</h2>
+                <form onsubmit="handleRegister(event)">
+                    <div style="margin-bottom: 1rem;">
+                        <label for="reg-name">Full Name</label><br>
+                        <input type="text" id="reg-name" required style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;">
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label for="reg-email">Email Address</label><br>
+                        <input type="email" id="reg-email" required style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;">
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label for="reg-plan">Membership Plan</label><br>
+                        <select id="reg-plan" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;">
+                            <option value="Basic">Basic (£25/mo)</option>
+                            <option value="Intermediate">Intermediate (£35/mo)</option>
+                            <option value="Advanced">Advanced (£45/mo)</option>
+                            <option value="Elite">Elite (£60/mo)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <h2 style="margin-bottom: 1rem;">DOBU <span style="color: var(--primary-yellow);">MARTIAL ARTS</span></h2>
+            <p>123 Combat Way, London | Contact: info@dobumartialarts.com | Phone: +44 20 7946 0958</p>
+            <div class="social-links" style="margin: 1rem 0;">
+                <a href="#" aria-label="Facebook">Facebook</a> | 
+                <a href="#" aria-label="Instagram">Instagram</a> |
+                <a href="#" aria-label="Twitter">Twitter</a>
+            </div>
+            <p>&copy; 2026 DoBu Martial Arts. Designed by Htet Aung Shine.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

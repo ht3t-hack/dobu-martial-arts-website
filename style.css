@@ -1,0 +1,330 @@
+:root {
+    --bg-color: #0b0b0b;
+    --text-color: #f5f5f5;
+    --primary-yellow: #FFCC00; /* Bruce Lee Iconic Yellow */
+    --primary-yellow-hover: #E5B800;
+    --card-bg: #161616;
+    --border-color: #262626;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Accessibility Focus States */
+a:focus, button:focus, input:focus, select:focus {
+    outline: 3px solid var(--primary-yellow);
+    outline-offset: 2px;
+}
+
+/* Navigation Bar */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: #000;
+    border-bottom: 2px solid var(--primary-yellow);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.logo span { 
+    color: var(--primary-yellow); 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-yellow);
+}
+
+.nav-links a.active { 
+    color: var(--primary-yellow);
+    border-bottom: 2px solid var(--primary-yellow); 
+}
+
+.btn-login {
+    background-color: var(--primary-yellow);
+    color: #000 !important;
+    padding: 0.4rem 1.2rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-login:hover {
+    background-color: var(--primary-yellow-hover);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary-yellow);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.85)), url('bg.jpg') center/cover;
+}
+
+.hero-content h1 { 
+    font-size: 3rem; 
+    margin-bottom: 1rem; 
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #fff;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.8rem 2rem; 
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.5rem;
+    font-weight: 800; 
+    border-radius: 4px; 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+
+.btn-primary { 
+    background: #FFCC00; 
+    color: #000000; 
+}
+
+.btn-primary:hover {
+    background: #E5B800; 
+    transform: scale(1.05); 
+}
+
+.btn-outline { 
+    border: 2px solid #FFCC00; 
+    color: #FFCC00; 
+    background: transparent; 
+}
+
+.btn-outline:hover {
+    background: #FFCC00;
+    color: #000000;
+}
+
+/* Containers & Grids */
+.container { 
+    padding: 3rem 5%; 
+}
+
+.page-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Cards & Selection States */
+.card {
+    background: #111111; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    text-align: left; 
+    border: 1px solid #222222; 
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border: 1px solid #FFCC00; 
+    box-shadow: 0 10px 20px rgba(255, 204, 0, 0.15);
+}
+
+.card img { 
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+    border-bottom: 2px solid #FFCC00;
+}
+
+.card h3 {
+    padding: 1rem 1.5rem 0.5rem;
+    color: #ffffff;
+}
+
+.card p {
+    padding: 0 1.5rem 1.5rem;
+    font-size: 0.95rem;
+    color: #b8b8b8; 
+}
+
+.card:hover, 
+.card:active, 
+.card:focus-within {
+    border: 2px solid var(--primary-yellow);
+    box-shadow: 0 4px 20px rgba(255, 204, 0, 0.15);
+}
+
+.card img { 
+    width: 100%; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px; 
+    margin-bottom: 1rem; 
+}
+
+.role {
+    font-size: 0.95rem;
+    color: var(--primary-yellow);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.price { 
+    font-size: 2.2rem; 
+    font-weight: bold; 
+    color: var(--primary-yellow); 
+    margin: 1rem 0;
+}
+
+.extras-list {
+    margin-top: 1.5rem;
+    list-style: none;
+}
+
+.extras-list li {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.05rem;
+}
+
+.extras-list li strong {
+    color: var(--primary-yellow);
+}
+
+/* Timetable Styling */
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 2rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 14px 10px;
+    font-size: 0.95rem;
+}
+
+/* Yellow Header with Black Text for High Contrast */
+th {
+    background-color: var(--primary-yellow);
+    color: #000000;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #101010;
+}
+
+tbody tr:hover {
+    background-color: #1f1f1f;
+}
+
+td:first-child {
+    font-weight: bold;
+    color: var(--primary-yellow);
+    background-color: #0d0d0d;
+}
+
+/* Form Styles */
+input, select {
+    background-color: #0b0b0b;
+    border: 1px solid var(--border-color);
+    color: #fff;
+    border-radius: 4px;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-yellow);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-links { 
+        display: none; 
+        flex-direction: column; 
+        width: 100%; 
+        position: absolute; 
+        top: 70px; 
+        left: 0; 
+        background: #000; 
+        padding: 1.5rem; 
+        border-bottom: 2px solid var(--primary-yellow);
+        z-index: 1000;
+    }
+    .nav-links.show { 
+        display: flex; 
+    }
+    .hamburger { 
+        display: block; 
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
